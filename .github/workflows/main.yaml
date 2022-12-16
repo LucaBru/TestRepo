@@ -17,7 +17,8 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.8
-          
+      - name: install dependencies
+        run: pip install github-action-utils
       - name: execute actions.py
         run: |
           python actions.py
