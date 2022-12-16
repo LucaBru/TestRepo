@@ -11,7 +11,7 @@ jobs:
         id: cache
         uses: actions/cache@v3
         with:
-          path: ~/python
+          path: ~/Python
           key: ${{ runner.os }}-python
       - name: setup python
         uses: actions/setup-python@v2
