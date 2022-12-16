@@ -5,9 +5,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
-        with:
-          python-version: '3.x'
-        with:
+      - name: checkout repo content
+        uses: actions/checkout@v3
+      - name: set python
+        uses: actions/setup-python@v4
+          with:
+            python-version: '3.x'
+      - name: run actions.py
+        run:
           script: | python actions.py
