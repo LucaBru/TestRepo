@@ -7,12 +7,6 @@ jobs:
     steps:
       - name: checkout repo content
         uses: actions/checkout@v2
-      - name: caching
-        id: cache
-        uses: actions/cache@v3
-        with:
-          path: ~/.cache
-          key: ${{ runner.os }}-python
       - name: setup python
         uses: actions/setup-python@v2
         with:
@@ -22,3 +16,4 @@ jobs:
       - name: execute actions.py
         run: |
           python actions.py
+        shell: pwsh
